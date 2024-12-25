@@ -23,10 +23,9 @@ function navResponsive() {
 function closeNav(){
   var navClose = document.getElementById("dropdown");
   var x = document.getElementById("navbar");
-  navClose.style.display="none";
+  navClose.style.display="none !important";
   x.className = "topnav";
 }
-
 
 function setActivePage(){
   var header = document.getElementById("navbar-right");
@@ -38,6 +37,10 @@ function setActivePage(){
     this.className += " active";
     });
   }
+}
 
+function setActivePageMobile(){
+
+  setActivePage();
   closeNav();
 }

@@ -10,16 +10,24 @@
 <body onscroll="scrollFunction();">
     <!-- nav bar section -->
     <div id="navbar" class="topnav">
-        <a href="#default" id="logo" onclick="closeNav()">CompanyLogo</a>
-         <a href="javascript:void(0);" class="icon" onclick="navResponsive()">meow</a>
-        <div id = "dropdown">
-            <div id="navbar-right">
-              <a class="btn active" href="#home" onclick="setActivePage()">Home</a>
-              <a class="btn" href="#contact" onclick="setActivePage()">Contact</a>
-              <a class="btn" href="#about" onclick="setActivePage()">About</a>
-            </div>
-        </div>
+        <a href="#default" id="logo" onclick="closeNavMobile()">CompanyLogo</a>
+          <a href="javascript:void(0);" class="icon" onclick="navResponsive()">meow</a>
+          <div id = "dropdown">
+              <div id="navbar-right">
+                <a class="btn active" href="#home" onclick="setActivePage()">Home</a>
+                <a class="btn" href="#contact" onclick="setActivePage()">Contact</a>
+                <a class="btn" href="#about" onclick="setActivePage()">About</a>
+              </div>
+          </div>
       </div>
+
+      <div id = "dropdownMobile">
+        <div id="navbar-rightMobile">
+          <a class="btn active" href="#home" onclick="setActivePageMobile()">Home</a>
+          <a class="btn" href="#contact" onclick="setActivePageMobile()">Contact</a>
+          <a class="btn" href="#about" onclick="setActivePageMobile()">About</a>
+        </div>
+    </div>
       
 
       <!-- nav bar -->
