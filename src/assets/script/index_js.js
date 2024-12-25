@@ -13,9 +13,9 @@ function navResponsive() {
     var y = document.getElementById("dropdown");
     if (x.className === "topnav") {
       x.className += " responsive";
-      y.display = block;
+      y.style.display = "block";
     } else {
       x.className = "topnav";
-      y.display = none;
+      y.style.display = "none";
     }
   }
