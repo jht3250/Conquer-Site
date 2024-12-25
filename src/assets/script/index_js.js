@@ -13,9 +13,31 @@ function navResponsive() {
     var y = document.getElementById("dropdown");
     if (x.className === "topnav") {
       x.className += " responsive";
-      y.style.display = "block";
+      y.style.display = "flex";
     } else {
       x.className = "topnav";
       y.style.display = "none";
     }
   }
+
+function closeNav(){
+  var navClose = document.getElementById("dropdown");
+  var x = document.getElementById("navbar");
+  navClose.style.display="none";
+  x.className = "topnav";
+}
+
+
+function setActivePage(){
+  var header = document.getElementById("navbar-right");
+  var btns = header.getElementsByClassName("btn");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+    });
+  }
+
+  closeNav();
+}

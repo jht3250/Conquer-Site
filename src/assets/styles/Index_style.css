@@ -17,7 +17,6 @@ body {
 }
 
 #navbar a {
-  float: left;
   color: black;
   text-align: center;
   padding: 12px;
@@ -77,7 +76,6 @@ body {
 
 @media screen and (max-width: 600px) {
     .topnav a.icon {
-      float: right;
       display: block;
     }
 
@@ -97,12 +95,12 @@ body {
     }
 
     .topnav .icon {
-      position: absolute;
+      position: relative;
+      float: right;
       right: 0;
       top: 0;
     }
     .topnav.responsive a {
-      float: none;
       display: block;
       text-align: left;
     }
@@ -114,5 +112,9 @@ body {
 
     #dropdown {
       display: none;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      top: 20%;
     }
   }
