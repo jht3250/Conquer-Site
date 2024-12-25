@@ -115,4 +115,46 @@ body {
     #dropdown {
       display: none;
     }
+
+    #grid1 {
+      display: grid;
+      grid-template-rows: auto auto auto auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    #grid2 {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    #grid2right {
+      display: grid;
+      grid-template-rows: auto auto auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    #grid3 {
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    #grid4 {
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 10px;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+
+    #grid5 {
+      background-color: #2196F3;
+      padding: 10px;
+    }
   }
