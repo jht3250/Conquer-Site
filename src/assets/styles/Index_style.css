@@ -1,4 +1,7 @@
-* {box-sizing: border-box;}
+* {
+  
+  box-sizing: border-box;
+}
 
 body { 
   margin: 0;
@@ -103,17 +106,12 @@ body {
   float: right;
 }
 
-.grid {
-  border-style: solid;
-  border-color: black;
-}
-
 #grid1 {
   display: grid;
   grid-template-rows: auto auto auto auto auto;
-  grid-gap: 10px;
+  grid-gap: 0px;
   background-color: #2196F3;
-  padding: 10px;
+  padding: 0px;
   margin-top: 14.3em;
 }
 
@@ -122,7 +120,16 @@ body {
   grid-template-columns: auto auto;
   grid-gap: 10px;
   background-color: #2196F3;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+#grid2left {
+  width: 100vw;
+  max-width: 600px;
+  display: block;
+  margin: 0;
+  padding: 0;
 }
 
 #grid2right {
@@ -131,6 +138,36 @@ body {
   grid-gap: 10px;
   background-color: #2196F3;
   padding: 10px;
+}
+
+#grid2right .grid-item {
+  position: relative;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  transition: max-height 0.3s ease, background-color 0.3s ease;
+  max-height: 50px; 
+  overflow: hidden; 
+}
+
+#grid2right .grid-item h3 {
+  margin: 0;
+}
+
+#grid2right .grid-item .subtext {
+  display: block;
+  margin-top: 10px;
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+#grid2right .grid-item:hover {
+  background-color: #e0e0e0;
+  max-height: 150px; 
+}
+
+#grid2right .grid-item:hover .subtext {
+  opacity: 1; 
 }
 
 #grid3 {
