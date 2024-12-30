@@ -50,3 +50,26 @@ function setActivePageMobile(){
   setActivePage();
   closeNav();
 }
+
+function changeImageOnHover(x){
+  var dropdownImage = document.getElementById("grid2left");
+    if(x == "header1"){
+      dropdownImage.src = "../assets/images/IMG_0433.JPG";
+    }
+    if(x == "header2"){
+      dropdownImage.src = "../assets/images/IMG_0434.JPG";
+
+    }
+    if(x=="header3"){
+      dropdownImage.src = "../assets/images/IMG_0435.JPG";
+
+    }
+    if(x=="header4"){
+      dropdownImage.src = "../assets/images/IMG_0436.JPG";
+    }
+}
+
+function returnHoverMenuImage(){
+  var dropdownImage = document.getElementById("grid2left");
+  dropdownImage.src = "../assets/images/IMG_0432.JPG";
+}
