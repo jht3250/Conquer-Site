@@ -36,7 +36,7 @@ body {
 #navbar {
   overflow: hidden;
   background-color: #f1f1f1;
-  padding: 90px 10px;
+  padding: 3em 10px;
   transition: 0.4s;
   position: fixed;
   width: 100%;
@@ -112,7 +112,7 @@ body {
   grid-gap: 0px;
   background-color: #2196F3;
   padding: 0px;
-  margin-top: 14.3em;
+  /*margin-top: 14.3em; */
 }
 
 #grid2 {
@@ -240,5 +240,11 @@ body {
 
     #dropdown{
       display: none;
+    }
+
+    .image-container{
+      top:7em;
+      width: 100%;
+      height: auto;
     }
 }
