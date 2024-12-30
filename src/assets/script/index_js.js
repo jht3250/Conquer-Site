@@ -9,16 +9,16 @@ function scrollFunction() {
 }
 
 function navResponsive() {
-    var x = document.getElementById("navbar");
-    var y = document.getElementById("dropdown");
-    if (x.className === "topnav") {
+  var x = document.getElementById("navbar");
+  var y = document.getElementById("dropdown");
+  if (x.className === "topnav") {
       x.className += " responsive";
-      y.style.display = "flex";
-    } else {
+      y.style.display = "block";
+  } else {
       x.className = "topnav";
       y.style.display = "none";
-    }
   }
+}
 
 function closeNav(){
   var navClose = document.getElementById("dropdown");
