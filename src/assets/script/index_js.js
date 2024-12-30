@@ -1,10 +1,22 @@
 function scrollFunction() {
-  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-    document.getElementById("navbar").style.padding = "1em 10px";
-    document.getElementById("logo").style.fontSize = "25px";
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+    document.getElementById("navbar").style.padding = "0em 10px";
+    document.getElementById("navbar").style.opacity = "98%";
+    document.getElementById("navbar").style.backgroundImage = "linear-gradient(black, rgb(77,77,77)";
+    document.getElementById("logo").style.height = "4em";
+    document.getElementById("navbar-right").style.marginTop = "13%";
+    document.getElementById("homebtn").style.color = "rgb(256,256,256)";
+    document.getElementById("contactbtn").style.color = "rgb(256,256,256)";
+    document.getElementById("aboutbtn").style.color = "rgb(256,256,256)";
   } else {
-    document.getElementById("navbar").style.padding = "3em 10px";
-    document.getElementById("logo").style.fontSize = "35px";
+    document.getElementById("navbar").style.padding = "0em 10px";
+    document.getElementById("navbar").style.backgroundImage = "linear-gradient(rgb(236, 236, 236), rgb(236, 236, 236))";
+    document.getElementById("navbar").style.opacity = "100%";
+    document.getElementById("logo").style.height = "7em";
+    document.getElementById("navbar-right").style.marginTop = "25%";
+    document.getElementById("homebtn").style.color = "#333";
+    document.getElementById("contactbtn").style.color = "#333";
+    document.getElementById("aboutbtn").style.color = "#333";
   }
 }
 

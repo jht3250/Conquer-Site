@@ -8,6 +8,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#logo{
+  height:7em;
+  margin: 0 !important;
+  padding: 0 !important;
+  opacity: 100% !important;
+}
+
 .image-container {
   position: relative;
   width: 100vw; /* Full width of the viewport */
@@ -35,43 +42,51 @@ body {
 
 #navbar {
   overflow: hidden;
-  background-color: #f1f1f1;
-  padding: 3em 10px;
+  background-image: linear-gradient(rgb(187, 187, 187), white);
+  opacity: 100%;
+  padding: 0em 10px;
   transition: 0.4s;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 99;
+  border-bottom: 2px solid #97773f;
 }
 
 #navbar a {
-  color: black;
+  color: rgb(85, 85, 85);
   text-align: center;
   padding: 12px;
   text-decoration: none;
   font-size: 18px; 
   line-height: 25px;
   border-radius: 4px;
+  opacity: 100% !important;
 }
 
 #navbar #logo {
-  font-size: 35px;
-  font-weight: bold;
-  transition: 0.4s;
+  transition: 0.8s;
 }
 
 #navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-#navbar a.active {
-  background-color: dodgerblue;
   color: white;
 }
 
+#navbar a.active {
+  text-decoration: underline;
+  color: #97773f !important;
+  font-weight: bolder;
+}
+
+#navbar a.active:hover {
+  color:white;
+}
+
+
 #navbar-right {
+  margin-top:25%;
   float: right;
+  transition: 0.8s;
 }
 
 .topnav {
@@ -89,14 +104,10 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #f1f1f1;
 }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
+
 
 .topnav .icon {
   display: none;
@@ -160,7 +171,9 @@ body {
   opacity: 0; 
   transition: opacity 0.3s ease;
 }
-
+#dropdownMobile{
+  display: none;
+}
 #grid2right .grid-item:hover {
   background-color: #e0e0e0;
   max-height: 150px; 
@@ -219,6 +232,7 @@ body {
       float: right;
       right: 0;
       top: 0;
+      margin-top: 10%;
     }
     .topnav.responsive a {
       display: block;
