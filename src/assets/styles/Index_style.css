@@ -132,6 +132,38 @@ body {
   padding: 0;
 }
 
+#hoverImg1 {
+  width: 100vw;
+  max-width: 600px;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#hoverImg2 {
+  width: 100vw;
+  max-width: 600px;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#hoverImg3 {
+  width: 100vw;
+  max-width: 600px;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#hoverImg4 {
+  width: 100vw;
+  max-width: 600px;
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
 #grid2right {
   display: grid;
   grid-template-rows: auto auto auto auto;
@@ -187,6 +219,8 @@ body {
   background-color: #2196F3;
   padding: 10px;
 }
+
+
 
 @media screen and (min-width: 601px) {
   #dropdown{
