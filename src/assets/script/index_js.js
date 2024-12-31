@@ -25,10 +25,10 @@ function scrollFunction() {
 
 function navResponsive() {
   var x = document.getElementById("navbar");
-  var y = document.getElementById("dropdown");
+  var y = document.getElementById("dropdownMobile");
   if (x.className === "topnav") {
       x.className += " responsive";
-      y.style.display = "block";
+      y.style.display = "grid";
   } else {
       x.className = "topnav";
       y.style.display = "none";
