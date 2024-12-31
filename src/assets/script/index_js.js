@@ -21,16 +21,16 @@ function scrollFunction() {
 }
 
 function navResponsive() {
-    var x = document.getElementById("navbar");
-    var y = document.getElementById("dropdown");
-    if (x.className === "topnav") {
+  var x = document.getElementById("navbar");
+  var y = document.getElementById("dropdown");
+  if (x.className === "topnav") {
       x.className += " responsive";
-      y.style.display = "flex";
-    } else {
+      y.style.display = "block";
+  } else {
       x.className = "topnav";
       y.style.display = "none";
-    }
   }
+}
 
 function closeNav(){
   var navClose = document.getElementById("dropdown");
@@ -64,24 +64,39 @@ function setActivePageMobile(){
 }
 
 function changeImageOnHover(x){
-  var dropdownImage = document.getElementById("grid2left");
-    if(x == "header1"){
-      dropdownImage.src = "../assets/images/IMG_0433.JPG";
-    }
-    if(x == "header2"){
-      dropdownImage.src = "../assets/images/IMG_0434.JPG";
-
-    }
-    if(x=="header3"){
-      dropdownImage.src = "../assets/images/IMG_0435.JPG";
-
-    }
-    if(x=="header4"){
-      dropdownImage.src = "../assets/images/IMG_0436.JPG";
-    }
+  if(x == "hv1"){
+    document.getElementById("hoverImg1").style.display = "block";
+    document.getElementById("grid2left").style.display = "none";
+  }
+  if(x == "hv2"){
+    document.getElementById("hoverImg2").style.display = "block";
+    document.getElementById("grid2left").style.display = "none";
+  }
+  if(x=="hv3"){
+    document.getElementById("hoverImg3").style.display = "block";
+    document.getElementById("grid2left").style.display = "none";
+  }
+  if(x=="hv4"){
+    document.getElementById("hoverImg4").style.display = "block";
+    document.getElementById("grid2left").style.display = "none";
+  }
 }
 
-function returnHoverMenuImage(){
-  var dropdownImage = document.getElementById("grid2left");
-  dropdownImage.src = "../assets/images/IMG_0432.JPG";
+function returnHoverMenuImage(x){
+  if(x == "hv1"){
+    document.getElementById("hoverImg1").style.display = "none";
+    document.getElementById("grid2left").style.display = "block";
+  }
+  if(x == "hv2"){
+    document.getElementById("hoverImg2").style.display = "none";
+    document.getElementById("grid2left").style.display = "block";
+  }
+  if(x=="hv3"){
+    document.getElementById("hoverImg3").style.display = "none";
+    document.getElementById("grid2left").style.display = "block";
+  }
+  if(x=="hv4"){
+    document.getElementById("hoverImg4").style.display = "none";
+    document.getElementById("grid2left").style.display = "block";
+  }
 }

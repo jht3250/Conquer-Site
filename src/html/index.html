@@ -11,7 +11,7 @@
     <!-- nav bar section -->
     <div id="navbar" class="topnav">  
         <a href="#default" onclick="closeNav()"><img id="logo" src="../assets/images/Logo-NoBG.png" alt="Conquer Health and Fitness Logo"/></a>
-          <a href="javascript:void(0);" class="icon" onclick="navResponsive()">meow</a>
+          <a id="navMenuIcon" href="javascript:void(0);" class="icon" onclick="navResponsive()">☰</a>
           <div id = "dropdown">
               <div id="navbar-right">
                 <a id="homebtn" class="btn active" href="#home">Home</a>
@@ -21,11 +21,11 @@
           </div>
       </div>
 
-      <div id = "dropdownMobile">
+    <div id="dropdownMobile">
         <div id="navbar-rightMobile">
-          <a class="btn active" href="#home" onclick="setActivePageMobile()">Home</a>
-          <a class="btn" href="#contact" onclick="setActivePageMobile()">Contact</a>
-          <a class="btn" href="#about" onclick="setActivePageMobile()">About</a>
+            <a class="btn active" href="#home" onclick="setActivePageMobile()">Home</a>
+            <a class="btn" href="#contact" onclick="setActivePageMobile()">Contact</a>
+            <a class="btn" href="#about" onclick="setActivePageMobile()">About</a>
         </div>
     </div>
     <!-- nav bar -->
@@ -40,21 +40,25 @@
       <div class = "grid" id = "grid2"> 
         <div> <!--image-->
           <img src="../assets/images/IMG_0432.JPG" alt="a photo of a " id="grid2left"/>
+          <img src="../assets/images/IMG_0433.JPG" alt="a photo of a " id="hoverImg1"/>
+          <img src="../assets/images/IMG_0434.JPG" alt="a photo of a " id="hoverImg2"/>
+          <img src="../assets/images/IMG_0435.JPG" alt="a photo of a " id="hoverImg3"/>
+          <img src="../assets/images/IMG_0436.JPG" alt="a photo of a " id="hoverImg4"/>
         </div>
         <div class="grid" id="grid2right"> <!--hover dropdowns-->
-          <div onmouseover="changeImageOnHover('header1')" onmouseleave="returnHoverMenuImage()" class="grid-item">
+          <div onmouseover="changeImageOnHover('hv1')" onmouseleave="returnHoverMenuImage('hv1')" class="grid-item">
             <h3>Header 1</h3>
             <p class="subtext">Subtext 1</p>
           </div>
-          <div onmouseover="changeImageOnHover('header2')" onmouseleave="returnHoverMenuImage()" class="grid-item">
+          <div onmouseover="changeImageOnHover('hv2')" onmouseleave="returnHoverMenuImage('hv2')" class="grid-item">
             <h3>Header 2</h3>
             <p class="subtext">Subtext 2</p>
           </div>
-          <div onmouseover="changeImageOnHover('header3')" onmouseleave="returnHoverMenuImage()" class="grid-item">
+          <div onmouseover="changeImageOnHover('hv3')" onmouseleave="returnHoverMenuImage('hv3')" class="grid-item">
             <h3>Header 3</h3>
             <p class="subtext">Subtext 3</p>
           </div>
-          <div onmouseover="changeImageOnHover('header4')" onmouseleave="returnHoverMenuImage()" class="grid-item">
+          <div onmouseover="changeImageOnHover('hv4')" onmouseleave="returnHoverMenuImage('hv4')" class="grid-item">
             <h3>Header 4</h3>
             <p class="subtext">Subtext 4</p>
           </div>
@@ -76,4 +80,7 @@
       </div>
     </div>
 </body>
+<footer>
+  <p>meows..</p>
+</footer>
 </html>
