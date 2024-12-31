@@ -475,53 +475,52 @@ hr {
     font-size: 2em !important;
   }
 
-  .topnav .icon {
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 14px 16px;
-    cursor: pointer;
+  .topnav.responsive {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
   }
 
-    .topnav.responsive {
-      position: relative;
-      height: 100%;
-      width: 100%;
-    }
+  .topnav a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
 
-    .topnav a {
-      float: left;
-      color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
-    }
-
-    .topnav .icon {
-      position: relative;
-      float: right;
-      right: 0;
-      top: 0;
-      margin-top: 10%;
-    }
-    .topnav.responsive a {
-      display: block;
-      text-align: left;
-    }
-
-  #navbar-rightMobile {
-    display: flex;
-    flex-direction: column;
+  .topnav .icon {
+    position: relative;
+    float: right;
+    right: 0;
+    top: 0;
+    margin-top: 10%;
+    display: block;
+    cursor: pointer;
+    color: #333;
+  }
+  .topnav.responsive a {
+    display: block;
+    text-align: left;
   }
 
   #dropdownMobile {
+    position: absolute;
     display: none;
-    position: relative;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 100px;
+    z-index: 100;
     justify-content: center;
     align-items: center;
-    top: 20%;
+    top: 40%;
+    left: 50%;
+    font-size: 2.8em;
+    margin: auto;
+  }
+
+  #dropdownMobile a {
+    color: #333;
   }
 
   #dropdown {
