@@ -181,7 +181,7 @@ body {
 
 #grid4 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto; 
   grid-gap: 10px;
   background-color: #f1f1f1;
   padding: 10px;
@@ -197,6 +197,15 @@ footer{
   color: white;
   background-color: #333;
   position: absolute;
+  text-align: center;
+}
+
+#socialLogos i{
+  padding-left: 3vw;
+}
+
+#TPCLogo{
+  height:25px;
 }
 
 
