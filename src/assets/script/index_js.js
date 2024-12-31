@@ -63,6 +63,13 @@ function setActivePageMobile(){
   closeNav();
 }
 
+function hideImages() {
+  document.getElementById("hoverImg1").style.display = "none";
+  document.getElementById("hoverImg2").style.display = "none";
+  document.getElementById("hoverImg3").style.display = "none";
+  document.getElementById("hoverImg4").style.display = "none";
+}
+
 function changeImageOnHover(x){
   if(x == "hv1"){
     document.getElementById("hoverImg1").style.display = "block";

@@ -133,52 +133,12 @@ body {
   margin: 0;
 }
 
-#grid2left {
+#grid2left, #hoverImg1, #hoverImg2, #hoverImg3, #hoverImg4 {
   width: 100vw;
   max-width: 600px;
   display: block;
   margin: 0;
   padding: 0;
-}
-
-#hoverImg1 {
-  width: 100vw;
-  max-width: 600px;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-#hoverImg2 {
-  width: 100vw;
-  max-width: 600px;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-#hoverImg3 {
-  width: 100vw;
-  max-width: 600px;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-#hoverImg4 {
-  width: 100vw;
-  max-width: 600px;
-  display: none;
-  margin: 0;
-  padding: 0;
-}
-
-#grid2right {
-  display: grid;
-  grid-template-rows: auto auto auto auto;
-  grid-gap: 10px;
-  background-color: #f1f1f1;
-  padding: 10px;
 }
 
 #grid2right .grid-item {
@@ -186,9 +146,7 @@ body {
   padding: 10px;
   background-color: #f1f1f1;
   border: 1px solid #ddd;
-  transition: max-height 0.3s ease, background-color 0.3s ease;
-  max-height: 50px; 
-  overflow: hidden; 
+  transition: background-color 0.3s ease;
 }
 
 #grid2right .grid-item h3 {
@@ -196,21 +154,24 @@ body {
 }
 
 #grid2right .grid-item .subtext {
-  display: block;
-  margin-top: 10px;
-  opacity: 0; 
-  transition: opacity 0.3s ease;
-}
-#dropdownMobile{
   display: none;
+  position: absolute;
+  top: 100%; /* Position below the header */
+  left: 0;
+  width: 100%;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1;
 }
+
 #grid2right .grid-item:hover {
   background-color: #e0e0e0;
-  max-height: 150px; 
 }
 
 #grid2right .grid-item:hover .subtext {
-  opacity: 1; 
+  display: block;
 }
 
 #grid3 {
