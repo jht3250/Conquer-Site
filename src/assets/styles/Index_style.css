@@ -367,7 +367,7 @@ textarea {
   background-color: #fff; 
 }
 
-social-media-list li:hover:after {
+.social-media-list li:hover:after {
   opacity: 1;  
   transform: scale(1.12);
   transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
@@ -388,6 +388,12 @@ hr {
   border-color: rgba(255,255,255,.6);
 }
 
+.footbody {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 100px;
+}
+
 .review {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -404,6 +410,7 @@ hr {
 #review-carousel {
   display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 }
@@ -421,17 +428,16 @@ hr {
   font-size: 2em;
   cursor: pointer;
   color: #333;
-  position: absolute;
-  top: 50%;
+  position: relative;
   transform: translateY(-50%);
 }
 
 #prev-review {
-  left: 0;
+  top: -10%;
 }
 
 #next-review {
-  right: 0;
+  bottom: 0;
 }
 
 /* Begin Media Queries*/
