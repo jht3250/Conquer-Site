@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../assets/script/index_js.js"></script>
 </head>
-<body onload="hideImages();" onscroll="scrollFunction();">
+<body onscroll="scrollFunction();">
     <!-- nav bar section -->
     <div id="navbar" class="topnav">  
       <a href="#default" onclick="closeNav()"><img id="logo" src="../assets/images/Logo-NoBG.png" alt="Conquer Health and Fitness Logo"/></a>
@@ -27,7 +27,7 @@
       <a class="btn" href="#about" onclick="setActivePageMobile()">About</a>
     </div>
     <!-- nav bar -->
-    <div class = "grid" id = "grid1"> <!--whole thing-->
+    <div class="grid" id="grid1">
       <div class="image-container"> <!--big img + text-->
         <img src="../assets/images/IMG_0438.JPG" alt="a closeup shot of a bench press" id="bigImg"/>
         <div id="bigImgText">
@@ -35,28 +35,22 @@
           <p>Conquer your health and fitness goals with us!</p>
         </div>
       </div>
-      <div class = "grid" id = "grid2"> 
-        <div> <!--image-->
-          <img src="../assets/images/IMG_0432.JPG" alt="a photo of a " id="grid2left"/>
-          <img src="../assets/images/_TJM0158.jpg" alt="a photo of a " id="hoverImg1"/>
-          <img src="../assets/images/_TJM0684.jpg" alt="a photo of a " id="hoverImg2"/>
-          <img src="../assets/images/_TJM0771.jpg" alt="a photo of a " id="hoverImg3"/>
-          <img src="../assets/images/_TJM1167.jpg" alt="a photo of a " id="hoverImg4"/>
-        </div>
-        <div class="grid" id="grid2right"> <!--hover dropdowns-->
-          <div onmouseover="changeImageOnHover('hv1')" onmouseleave="returnHoverMenuImage('hv1')" class="grid-item">
+      <div class="grid" id="grid2">
+        <div id="grid2left" class="background-image"></div>
+        <div class="grid" id="grid2right">
+          <div onmouseover="changeBackgroundImage('hv1')" onmouseleave="resetBackgroundImage()" class="grid-item">
             <h3>Header 1</h3>
             <p class="subtext">Subtext 1</p>
           </div>
-          <div onmouseover="changeImageOnHover('hv2')" onmouseleave="returnHoverMenuImage('hv2')" class="grid-item">
+          <div onmouseover="changeBackgroundImage('hv2')" onmouseleave="resetBackgroundImage()" class="grid-item">
             <h3>Header 2</h3>
             <p class="subtext">Subtext 2</p>
           </div>
-          <div onmouseover="changeImageOnHover('hv3')" onmouseleave="returnHoverMenuImage('hv3')" class="grid-item">
+          <div onmouseover="changeBackgroundImage('hv3')" onmouseleave="resetBackgroundImage()" class="grid-item">
             <h3>Header 3</h3>
             <p class="subtext">Subtext 3</p>
           </div>
-          <div onmouseover="changeImageOnHover('hv4')" onmouseleave="returnHoverMenuImage('hv4')" class="grid-item">
+          <div onmouseover="changeBackgroundImage('hv4')" onmouseleave="resetBackgroundImage()" class="grid-item">
             <h3>Header 4</h3>
             <p class="subtext">Subtext 4</p>
           </div>

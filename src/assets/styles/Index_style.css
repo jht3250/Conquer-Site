@@ -131,6 +131,34 @@ body {
   background-color: #f1f1f1;
   padding: 0;
   margin: 0;
+  position: relative;
+  background-image: url('../images/drop5.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  transition: background-image 0.5s ease-in-out;
+}
+
+#grid2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  z-index: -1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+#grid2.fade-out::before {
+  opacity: 0;
+}
+
+#grid2.fade-in::before {
+  opacity: 1;
 }
 
 #grid2right {
@@ -150,6 +178,18 @@ body {
   padding: 0;
 }
 
+.grid-item {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.grid-item:hover {
+  background-color: rgba(224, 224, 224, 0.8);
+}
+
 #grid2right .grid-item {
   position: relative;
   padding: 10px;
@@ -158,6 +198,11 @@ body {
   transition: max-height 0.3s ease, background-color 0.3s ease;
   max-height: 50px; 
   overflow: hidden; 
+}
+
+#grid2right {
+  padding-top: 50px;
+  background-color: transparent;
 }
 
 #grid2right .grid-item h3 {
@@ -588,4 +633,113 @@ hr {
     height: auto;
   }
 
+  body {
+    font-size: 14px;
+  }
+
+  #navbar {
+    padding: 0.5em 10px;
+  }
+
+  #navbar a {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #logo {
+    height: 5em;
+  }
+
+  #navbar-right {
+    margin-top: 15%;
+  }
+
+  .image-container {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #bigImg {
+    width: 100%;
+  }
+
+  #grid1 {
+    grid-template-rows: auto auto auto auto;
+  }
+
+  #grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  #grid2left, #hoverImg1, #hoverImg2, #hoverImg3, #hoverImg4 {
+    width: 100%;
+    max-width: none;
+  }
+
+  #grid2right {
+    grid-template-columns: 1fr;
+  }
+
+  #grid4 {
+    grid-template-columns: 1fr;
+  }
+
+  #review-carousel {
+    flex-direction: column;
+  }
+
+  #prev-review, #next-review {
+    font-size: 1.5em;
+  }
+
+  #prev-review {
+    top: -5%;
+  }
+
+  #next-review {
+    bottom: -5%;
+  }
+
+  footer {
+    padding: 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-horizontal, .direct-contact-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .social-media-list li {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+  }
+
+  .social-media-list li:after {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;  }}
+
+.fade-in {
+  animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }

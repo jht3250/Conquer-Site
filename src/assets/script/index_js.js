@@ -54,54 +54,40 @@ function setActivePageMobile(){
   closeNav();
 }
 
-function hideImages() {
-  document.getElementById("hoverImg1").style.display = "none";
-  document.getElementById("hoverImg2").style.display = "none";
-  document.getElementById("hoverImg3").style.display = "none";
-  document.getElementById("hoverImg4").style.display = "none";
+function changeBackgroundImage(x) {
+  const grid2 = document.getElementById('grid2');
+  grid2.classList.add('fade-out');
+  setTimeout(() => {
+    if(x == "hv1"){
+      grid2.style.backgroundImage = `url(../assets/images/drop1.jpg)`;
+    }
+    if(x == "hv2"){
+      grid2.style.backgroundImage = `url(../assets/images/drop2.jpg)`;
+    }
+    if(x=="hv3"){
+      grid2.style.backgroundImage = `url(../assets/images/drop3.jpg)`;
+    }
+    if(x=="hv4"){
+      grid2.style.backgroundImage = `url(../assets/images/drop4.jpg)`;
+    }
+    grid2.classList.remove('fade-out');
+    grid2.classList.add('fade-in');
+  }, 500);
 }
 
-function changeImageOnHover(x){
-  if(x == "hv1"){
-    document.getElementById("hoverImg1").style.display = "block";
-    document.getElementById("grid2left").style.display = "none";
-  }
-  if(x == "hv2"){
-    document.getElementById("hoverImg2").style.display = "block";
-    document.getElementById("grid2left").style.display = "none";
-  }
-  if(x=="hv3"){
-    document.getElementById("hoverImg3").style.display = "block";
-    document.getElementById("grid2left").style.display = "none";
-  }
-  if(x=="hv4"){
-    document.getElementById("hoverImg4").style.display = "block";
-    document.getElementById("grid2left").style.display = "none";
-  }
-}
-
-function returnHoverMenuImage(x){
-  if(x == "hv1"){
-    document.getElementById("hoverImg1").style.display = "none";
-    document.getElementById("grid2left").style.display = "block";
-  }
-  if(x == "hv2"){
-    document.getElementById("hoverImg2").style.display = "none";
-    document.getElementById("grid2left").style.display = "block";
-  }
-  if(x=="hv3"){
-    document.getElementById("hoverImg3").style.display = "none";
-    document.getElementById("grid2left").style.display = "block";
-  }
-  if(x=="hv4"){
-    document.getElementById("hoverImg4").style.display = "none";
-    document.getElementById("grid2left").style.display = "block";
-  }
+function resetBackgroundImage() {
+  const grid2 = document.getElementById('grid2');
+  grid2.classList.add('fade-out');
+  setTimeout(() => {
+    grid2.style.backgroundImage = "url('../assets/images/drop5.jpg')";
+    grid2.classList.remove('fade-out');
+    grid2.classList.add('fade-in');
+  }, 500);
 }
 
 async function fetchGoogleReviews() {
-  const placeId = 'REDACTED'; // conquer place id from google maps api
-  const apiKey = 'REDACTED'; // our api key 
+  const placeId = 'ChIJjUSRAPx55IkR06P1-UDzLWY'; // conquer place id from google maps api
+  const apiKey = 'AIzaSyD3qBiyyPC5S9OtXCp1anh1tUYQpU6xPog'; // our api key 
   const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // temporary heroku proxy 
   try {
