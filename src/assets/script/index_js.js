@@ -83,7 +83,7 @@ function resetBackgroundImage() {
 
 async function fetchGoogleReviews() {
   const placeId = 'ChIJjUSRAPx55IkR06P1-UDzLWY'; // conquer place id from google maps api
-  const apiKey = 'REDACTED'; // our api key 
+  const apiKey = 'AIzaSyD4bLuPBVaZ9Adb_z9gmktlP2YTeY_y2i8'; // our api key 
   const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // temporary heroku proxy 
   try {
