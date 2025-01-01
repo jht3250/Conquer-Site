@@ -128,11 +128,10 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
-  background-color: #f1f1f1;
+  background-color: #333;
   padding: 0;
   margin: 0;
   position: relative;
-  background-image: url('../images/drop5.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
@@ -263,11 +262,12 @@ footer{
 .section-header {
   text-align: center;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 30px 0;
   font: 300 60px 'Oswald', sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 6px;
+  font-size: 30px;
 }
 
 .contact-wrapper {
@@ -275,7 +275,7 @@ footer{
   flex-direction: row;
   justify-content: space-between;
   margin: 0 auto;
-  padding: 20px;
+  padding: 15px;
   position: relative;
   max-width: 840px;
 }
@@ -286,14 +286,18 @@ footer{
   max-width: 400px;
   font-family: 'Lato';
   font-weight: 400;
+  transition: all .2s ease-in-out;
 }
 
 .form-control, 
 textarea {
-  max-width: 400px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 400px;
   background-color: #000;
   color: #fff;
   letter-spacing: 1px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .send-button {
@@ -306,7 +310,7 @@ textarea {
 
 .alt-send-button {
   width: 400px;
-  height: 34px;
+  height: 10px;
   transition: all .2s ease-in-out;
 }
 
@@ -487,8 +491,16 @@ hr {
   bottom: 0;
 }
 
+#TPC_CC{
+  color:#555;
+}
+
 /* Begin Media Queries*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 750px) {
+
+  .form-control, textarea{
+    width: 99%;
+  }
   .contact-wrapper {
     display: flex;
     flex-direction: column;
@@ -499,7 +511,7 @@ hr {
   
   .direct-contact-container {
     margin-top: 60px;
-    max-width: 300px;
+    width: 99%;
   }    
   .social-media-list li {
     height: 60px;
@@ -522,16 +534,17 @@ hr {
   .form-control, textarea {
     
     margin: 0 auto;
+    width: 99%;
   }
  
   
   .name, .email, textarea {
-    width: 280px;
+    width: 99%;
   } 
   
   .direct-contact-container {
     margin-top: 60px;
-    max-width: 280px;
+   width: 280px;
   }  
   .social-media-list {
     left: 0;
@@ -553,6 +566,11 @@ hr {
 @media screen and (max-width: 601px) {
   .send-button {
     width: 99%;
+    text-align: center;
+  }
+  .alt-send-button {
+    width: 99%;
+    text-align: center;
   }
 }
 
