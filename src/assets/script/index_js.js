@@ -56,7 +56,6 @@ function setActivePageMobile(){
 
 function changeBackgroundImage(x) {
   const grid2 = document.getElementById('grid2');
-  grid2.classList.add('fade-out');
   setTimeout(() => {
     if(x == "hv1"){
       grid2.style.backgroundImage = `url(../assets/images/drop1.jpg)`;
@@ -70,17 +69,14 @@ function changeBackgroundImage(x) {
     if(x=="hv4"){
       grid2.style.backgroundImage = `url(../assets/images/drop4.jpg)`;
     }
-    grid2.classList.remove('fade-out');
     grid2.classList.add('fade-in');
   }, 500);
 }
 
 function resetBackgroundImage() {
   const grid2 = document.getElementById('grid2');
-  grid2.classList.add('fade-out');
   setTimeout(() => {
     grid2.style.backgroundImage = "url('../assets/images/drop5.jpg')";
-    grid2.classList.remove('fade-out');
     grid2.classList.add('fade-in');
   }, 500);
 }
