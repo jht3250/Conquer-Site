@@ -70,7 +70,7 @@ function changeBackgroundImage(x) {
       grid2.style.backgroundImage = `url(../assets/images/drop4.jpg)`;
     }
     grid2.classList.add('fade-in');
-  }, 500);
+  }, 250);
 }
 
 function resetBackgroundImage() {
@@ -83,7 +83,7 @@ function resetBackgroundImage() {
 
 async function fetchGoogleReviews() {
   const placeId = 'ChIJjUSRAPx55IkR06P1-UDzLWY'; // conquer place id from google maps api
-  const apiKey = 'AIzaSyD3qBiyyPC5S9OtXCp1anh1tUYQpU6xPog'; // our api key 
+  const apiKey = 'REDACTED'; // our api key 
   const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
   const proxyUrl = 'https://cors-anywhere.herokuapp.com/'; // temporary heroku proxy 
   try {
