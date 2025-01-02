@@ -126,9 +126,15 @@ function updateReviewCarousel() {
     reviewElement.appendChild(authorElement);
 
     const ratingElement = document.createElement('p');
-    ratingElement.textContent = `Rating: ${review.rating}`;
-    reviewElement.appendChild(ratingElement);
-
+    console.log(review.rating);
+    if(review.rating == 5){
+      ratingElement.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>`
+      reviewElement.appendChild(ratingElement);
+    }
+    if(review.rating == 4){
+      ratingElement.innerHTML = `<i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star">`
+      reviewElement.appendChild(ratingElement);
+    }
     const textElement = document.createElement('p');
     textElement.textContent = review.text;
     reviewElement.appendChild(textElement);

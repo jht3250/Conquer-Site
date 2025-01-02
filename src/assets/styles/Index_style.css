@@ -1,3 +1,5 @@
+
+
 * {
   
   box-sizing: border-box;
@@ -6,6 +8,7 @@
 body { 
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  background-color: #0f0f0f;
 }
 
 #logo{
@@ -128,7 +131,7 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 10px;
-  background-color: #333;
+  background-image: url("../images/drop5.jpg");
   padding: 0;
   margin: 0;
   position: relative;
@@ -136,8 +139,10 @@ body {
   background-position: center;
   width: 100%;
   height: 100%;
-  min-height: 600px;
-  transition: background-image 0.8s;
+  min-height: 900px;
+  align-items: center;
+  justify-content: center;
+  transition: background-image 0.5s;
 }
 
 #grid2::before {
@@ -149,7 +154,7 @@ body {
   height: 100%;
   background: inherit;
   z-index: -1;
-  transition: opacity 0.8s;
+  transition: opacity 0.5s;
 }
 
 #grid2.fade-out::before {
@@ -179,67 +184,77 @@ body {
 .grid-item {
   position: relative;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ddd;
-  transition: background-color 0.3s ease;
+  background-image: linear-gradient(#333, rgba(201, 201, 201, 0.5));
+  transition: background-color 0.7s ease;
+  color: white;
+  text-decoration:none;
+  overflow:hidden;
+  width: 550px;
+
 }
 
 .grid-item:hover {
-  background-color: rgba(224, 224, 224, 0.8);
+  background-image: linear-gradient(#333, rgba(121, 121, 121, 0.5));
 }
 
 #grid2right .grid-item {
   position: relative;
   padding: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
-  transition: max-height 0.3s ease, background-color 0.3s ease;
+  transition: max-height 0.7s ease, background-color 0.7s ease;
   max-height: 50px; 
   overflow: hidden; 
 }
 
 #grid2right {
   padding-top: 50px;
+  margin-left:75%;
   background-color: transparent;
 }
 
 #grid2right .grid-item h3 {
   margin: 0;
+  text-align: center;
 }
 #grid2right .grid-item .subtext {
   display: block;
-  margin-top: 10px;
+  margin-top: 30px;
   opacity: 0; 
-  transition: opacity 0.3s ease;
+  transition: opacity 0.7s ease;
 }
 #grid2right .grid-item:hover {
-  background-color: #e0e0e0;
-  max-height: 150px; 
+  background-image: linear-gradient(#333, rgba(121, 121, 121, 0.5));
+  max-height: 50em; 
 }
 #grid2right .grid-item:hover .subtext {
   opacity: 1; 
 }
 
 #grid3 {
-  background-color: #f1f1f1;
+  background-color: #333;
   padding: 10px;
+  padding-bottom: 4% ;
 }
 
 #grid4 {
   display: grid;
   grid-template-columns: auto auto; 
-  grid-gap: 10px;
+  grid-gap: 10%;
   background-color: #f1f1f1;
   padding: 10px;
 }
 
 #portrait {
   width: auto;
-  height: 10%;
+  height: 30em;
+  margin-left: 10%;
+}
+
+#portraitContent{
+  margin-top: 25%;
 }
 
 #grid5 {
-  background-color: #f1f1f1;
+  background-color: #333;
   padding: 10px;
 }
 
@@ -453,14 +468,21 @@ hr {
 .review {
   background-color: #fff;
   border: 1px solid #ddd;
+  filter: drop-shadow(0 2px 2px #ffffff);
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
-  transition: opacity 0.5s ease;
+  transition: ease-in 2s;
+  margin-left: 10%;
+  margin-right: 10%;
 }
+
 
 .review.dimmed {
   opacity: 0.5;
+  height: 125px;
+  overflow: hidden;
+  text-overflow:ellipsis;
 }
 
 #review-carousel {
@@ -483,17 +505,18 @@ hr {
   border: none;
   font-size: 2em;
   cursor: pointer;
-  color: #333;
+  color: #f1f1f1;
   position: relative;
   transform: translateY(-50%);
 }
 
 #prev-review {
-  top: -10%;
+  margin-top:3%;
 }
 
 #next-review {
   bottom: 0;
+  top: 20px;
 }
 
 #TPC_CC{
@@ -764,4 +787,124 @@ hr {
 @keyframes fadeOut {
   from { opacity: 1; }
   to { opacity: 0; }
+}
+
+
+
+
+
+.grid-item span:nth-child(1)
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(to right, #0c002b ,#97773f);
+  animation: animate1 2s linear infinite;
+  animation-delay:0s;
+  
+}
+@keyframes animate1
+{
+  0%
+  {
+    transform:translateX(-100%);
+}
+  100%
+  {
+    transform:translateX(100%);
+  }
+}
+.grid-item span:nth-child(2)
+{
+  position:absolute;
+  top:0;
+  right:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(to bottom, #0c002b ,#d3af72);
+  animation: animate2 2s linear infinite;
+  animation-delay:1s;
+}
+
+
+@keyframes animate1
+{
+  0%
+  {
+    transform:translateX(-100%);
+}
+  100%
+  {
+    transform:translateX(100%);
+  }
+}
+.grid-item span:nth-child(2)
+{
+  position:absolute;
+  top:0;
+  right:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(to bottom, #0c002b ,#97773f);
+  animation: animate2 2s linear infinite;
+  animation-delay:1s;
+}
+@keyframes animate2
+{
+  0%
+  {
+    transform:translateY(-100%);
+}
+  100%
+  {
+    transform:translateY(100%);
+  }
+}
+.grid-item span:nth-child(3)
+{
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(to left, #0c002b ,#97773f);
+   animation: animate3 2s linear infinite;
+  animation-delay:0s;
+  
+}
+@keyframes animate3
+{
+  0%
+  {
+    transform:translateX(100%);
+}
+  100%
+  {
+    transform:translateX(-100%);
+  }
+}
+.grid-item span:nth-child(4)
+{
+  position:absolute;
+  top:0;
+  left:0;
+  width:2px;
+  height:100%;
+  background:linear-gradient(to top, #0c002b ,#97773f);
+   animation: animate4 2s linear infinite;
+  animation-delay:1s;
+  
+}
+@keyframes animate4
+{
+  0%
+  {
+    transform:translateY(100%);
+}
+  100%
+  {
+    transform:translateY(-100%);
+  }
 }
