@@ -233,12 +233,14 @@ body {
   background-color: #333;
   padding: 10px;
   padding-bottom: 4% ;
+  width: 500px;
+  height: 55em;
 }
 
 #grid4 {
   display: grid;
   grid-template-columns: auto auto; 
-  grid-gap: 10%;
+  grid-gap: 10px;
   background-color: #f1f1f1;
   padding: 10px;
 }
@@ -247,10 +249,6 @@ body {
   width: auto;
   height: 30em;
   margin-left: 10%;
-}
-
-#portraitContent{
-  margin-top: 25%;
 }
 
 #grid5 {
@@ -475,6 +473,10 @@ hr {
   transition: ease-in 2s;
   margin-left: 10%;
   margin-right: 10%;
+  max-height: 400px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
 }
 
 
