@@ -129,7 +129,7 @@ body {
 
 #grid2 {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto;
   grid-gap: 10px;
   background-image: url("../images/drop5.jpg");
   padding: 0;
@@ -256,7 +256,7 @@ body {
   padding: 10px;
 }
 
-footer{
+footer {
   width:100vw;
   color: white;
   background-color: #333;
