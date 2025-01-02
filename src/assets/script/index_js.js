@@ -185,14 +185,5 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
   }
-
-  document.querySelectorAll('.grid-item').forEach(item => {
-    item.addEventListener('mouseover', () => {
-      document.querySelectorAll('.grid-item').forEach(i => i.classList.remove('open'));
-      item.classList.add('open');
-    });
-  });
 });
-
-
 

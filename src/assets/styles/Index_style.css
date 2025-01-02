@@ -792,7 +792,7 @@ hr {
 
 
 
-*, *::before, *::after {
+/**, *::before, *::after {
   box-sizing: border-box;
 }
 .grid3 {
@@ -867,4 +867,4 @@ hr {
     opacity: 0;
     visibility: hidden;
  }
-}
+}*/
