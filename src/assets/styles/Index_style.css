@@ -18,6 +18,13 @@ body {
   opacity: 100% !important;
 }
 
+#bisTitle{
+font-size: 2em;
+}
+#bisSubTitle{
+  font-size: 3em;
+}
+
 .image-container {
   position: relative;
   width: 100vw; /* Full width of the viewport */
@@ -131,7 +138,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  /*background-image: linear-gradient(black, #333);*/
   background-image: url("../images/drop5.jpg");
+  filter:brightness(100%);
   padding: 0;
   margin: 0;
   position: relative;
@@ -151,6 +160,7 @@ body {
   width: 100%;
   height: 100%;
   background: inherit;
+  filter: brightness(45%);
   z-index: -1;
   transition: opacity 0.5s;
 }
@@ -182,7 +192,8 @@ body {
 .grid-item {
   position: relative;
   padding: 10px;
-  background-image: linear-gradient(#333, rgba(201, 201, 201, 0.5));
+ /*background-image: linear-gradient(#333, rgba(201, 201, 201, 0.5));*/
+ border-bottom: white 3px solid;
   transition: background-color 0.7s ease;
   color: white;
   text-decoration:none;
@@ -192,7 +203,9 @@ body {
 }
 
 .grid-item:hover {
-  background-image: linear-gradient(#333, rgba(121, 121, 121, 0.5));
+  background-color:#f1f1f1;
+  color: #333;
+  border-bottom: #97773f 5px solid;
 }
 
 #grid2right .grid-item {
@@ -216,35 +229,59 @@ body {
   margin-top: 30px;
   opacity: 0; 
   transition: opacity 0.7s ease;
+  font-weight: bolder;
 }
 #grid2right .grid-item:hover {
-  background-image: linear-gradient(#333, rgba(121, 121, 121, 0.5));
   max-height: 50em; 
 }
 #grid2right .grid-item:hover .subtext {
   opacity: 1; 
 }
+#grid2right .grid-item .hoverContent {
+  font-weight: normal;
+  padding-top: 5px;
+}
+
+#aboutOwner{
+  padding: 3%;
+  display: block;
+  justify-items: center;
+  background-color:   #f1f1f1;
+  height: 43em;
+  width: 65em;
+  margin-top: 5%; 
+  border-bottom: #97773f 5px solid;
+  border-top: #97773f 5px solid;
+  border-right: #97773f 5px solid;
+}
 
 #grid3 {
   background-color: #333;
   padding: 10px;
-  padding-bottom: 4% ;
-  width: 500px;
+  width: 40em;
   height: 55em;
 }
 
 #grid4 {
   display: grid;
   grid-template-columns: auto auto; 
-  grid-gap: 10px;
-  background-color: #f1f1f1;
-  padding: 10px;
+    background-color: #333;
 }
 
 #portrait {
   width: auto;
-  height: 30em;
-  margin-left: 10%;
+  height: 25em;
+}
+
+#portraitDesc{
+  font-size: small;
+  color:#555;
+}
+
+#portraitContent{
+  padding-top: 30px;
+  font-size: 1em;
+  text-align: center;
 }
 
 #grid5 {
@@ -308,7 +345,7 @@ textarea {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   width: 400px;
   background-color: #000;
-  color: #fff;
+  color: #cdcdcd;
   letter-spacing: 1px;
   padding-bottom: 20px;
   margin-bottom: 10px;
@@ -456,7 +493,6 @@ hr {
 .footbody {
   margin: 0;
   padding: 0;
-  padding-bottom: 100px;
 }
 
 .review {
@@ -496,6 +532,7 @@ hr {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  flex-grow: 1;
 }
 
 #prev-review, #next-review {
@@ -503,10 +540,10 @@ hr {
   border: none;
   font-size: 2em;
   cursor: pointer;
-  position: fixed;
   color: #f1f1f1;
   position: relative;
   transform: translateY(-50%);
+  flex-grow: 1;
 }
 
 #prev-review {
@@ -515,7 +552,7 @@ hr {
 
 #next-review {
   bottom: 0;
-  top: 20px;
+  position: sticky;
 }
 
 #TPC_CC{
