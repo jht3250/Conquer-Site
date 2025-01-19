@@ -515,7 +515,8 @@ hr {
   transition: ease-in 2s;
   margin-left: 10%;
   margin-right: 10%;
-  max-height: 400px;
+  max-height: 200px;
+  min-height: 200px;
   text-overflow: ellipsis;
   overflow: hidden;
 
@@ -562,7 +563,7 @@ hr {
 
 #next-review {
   bottom: 0;
-  position: sticky;
+  padding-top: 70px;
 }
 
 #TPC_CC{
