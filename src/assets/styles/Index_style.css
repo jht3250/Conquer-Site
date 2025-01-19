@@ -202,18 +202,13 @@ font-size: 2em;
 
 }
 
-.grid-item:hover {
-  background-color:#f1f1f1;
-  color: #333;
-  border-bottom: #97773f 5px solid;
-}
 
 #grid2right .grid-item {
-  position: relative;
-  padding: 10px;
-  transition: max-height 0.7s ease, background-color 0.7s ease;
-  max-height: 50px; 
-  overflow: hidden; 
+    position: relative;
+    padding: 10px;
+    transition: max-height 0.7s ease, background-color 0.7s ease;
+    max-height: 50px; 
+    overflow: hidden; 
 }
 
 #grid2right {
@@ -231,15 +226,30 @@ font-size: 2em;
   transition: opacity 0.7s ease;
   font-weight: bolder;
 }
-#grid2right .grid-item:hover {
+
+
+#grid2right .grid-item.open {
   max-height: 50em; 
+  background-color:#f1f1f1;
+  color: #333;
+  border-bottom: #97773f 5px solid;
 }
-#grid2right .grid-item:hover .subtext {
+
+.grid-item:hover {
+  background-color:#f1f1f1;
+  color: #333;
+}
+
+#grid2right .grid-item .subtext {
+  display: block;
+  margin-top: 30px;
+  opacity: 0; 
+  transition: opacity 0.7s ease;
+  font-weight: bolder;
+}
+
+#grid2right .grid-item.open .subtext {
   opacity: 1; 
-}
-#grid2right .grid-item .hoverContent {
-  font-weight: normal;
-  padding-top: 5px;
 }
 
 #aboutOwner{
